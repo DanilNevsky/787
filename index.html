@@ -132,42 +132,45 @@
   .btn-map:hover { background:#b01818; transform:translateY(-1px); }
   footer { padding:22px 40px; text-align:center; font-size:10px; color:#2e2e2e; letter-spacing:2px; text-transform:uppercase; position:relative; z-index:1; }
   @media (max-width:640px) {
-    /* Hero — stack logo above text, tighter */
-    .hero { max-height: none; height: auto; min-height: 100svh; }
+    /* Hero */
+    .hero { max-height: none; height: 100svh; min-height: 500px; }
     .hero-content {
       flex-direction: column;
       align-items: flex-start;
-      padding: 0 20px 36px;
-      gap: 12px;
+      justify-content: flex-end;
+      padding: 0 20px 40px;
+      gap: 14px;
     }
-    .logo-wrap img { width: 72px; height: 72px; }
-    .hero-lbl { font-size: 9px; letter-spacing: 2px; }
+    .logo-wrap img { width: 68px; height: 68px; }
+    .hero-lbl { font-size: 9px; letter-spacing: 1.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
     .hero-title { font-size: 56px; }
     .hero-sub { font-size: 12px; letter-spacing: 0; }
 
-    /* Red strip — no letter-spacing, fits one line */
-    .rstrip { padding: 10px 16px; }
-    .rstrip-text { font-size: 11px; letter-spacing: 0; }
+    /* Red strip */
+    .rstrip { padding: 8px 16px; }
+    .rstrip-inner { gap: 6px; }
+    .rstrip-text { font-size: 10px; letter-spacing: 0.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .rstrip-dot { display: none; }
 
     /* Layout */
     .container { padding: 0 16px; }
     .sec { padding: 36px 0; }
-    .sec-title { font-size: 36px; }
+    .sec-title { font-size: 36px; margin-bottom: 20px; }
 
     /* Grids */
     .svc-grid, .why-grid { grid-template-columns: 1fr; }
 
     /* Master */
     .master-card { flex-direction: column; gap: 14px; }
-    .master-role { letter-spacing: 0; font-size: 9px; }
+    .master-role { letter-spacing: 0.5px; font-size: 9px; }
 
     /* Reviews */
     .rev-card { flex: 0 0 260px; }
 
     /* Contact */
     .contact { padding: 22px 16px; }
-    .c-phone { font-size: 36px; }
+    .c-phone { font-size: 38px; }
+    .contact::after { font-size: 120px; }
   }
 </style>
 </head>
